@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "path": "../sutdy"
+    },
+    {
+      "path": "../HTML_CSS_JS-main (2)"
+    },
+    {
+      "path": "../javascript.study"
+    },
+    {
+      "path": "../HTML_CSS_JS-main (java)"
+    },
+    {
+      "path": "../../Users/EZEN-40/Downloads/자료제출"
+    },
+    {
+      "path": "../../Users/EZEN-40/Downloads/boot-weather"
+    },
+    {
+      "path": "../../Users/EZEN-40/Downloads/웨더"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "웨더"
+  }
+}

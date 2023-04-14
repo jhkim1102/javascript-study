@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const x = prompt("숫자를 입력해주세요")
+        const y = prompt("숫자를 입력해주세요")
+        const z = prompt("숫자를 입력해주세요")
+
+        const total = x+y+z;
+        const avg = total/3;
+        var min = x
+        var max = x
+
+        if(min>x){min=x};
+        if(min>y){min=y};
+        if(min>z){min=z};
+
+        if(max<x){max=x};
+        if(max<y){max=y};
+        if(max<z){max=z};
+        
+        document.write("최대값" + max, "최소값" + min, "합계"+ total, "평균"+avg);
+
+        
+        
+    </script>
+</body>
+</html>

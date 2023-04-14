@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 매개변수 : 함수를 실행할때 값을 받는 변수
+        function f(x) {
+            console.log('${x}')
+            console.log('y는 $(y)')
+            return x * x;
+            // 리턴 값 : 함수를 실핼할때 되돌려주는 값
+        }
+
+        let num = f(5);
+        console.log('${num}');
+    </script>
+</body>
+</html>
