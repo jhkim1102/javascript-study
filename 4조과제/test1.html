@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span class="title"></span>
+    <div class="images"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      const movieurl =
+        "https://api.themoviedb.org/3/movie/now_playing?api_key=cf04bdef139b60541090dad976109662&language=ko-KR&page=1&region=KR";
+      $.ajax({
+        type: "GET",
+        url: movieurl,
+        dataType: "json",
+        async: false,
+        success: function (data) {
+          console.log("전체 data:", data);
+
+          const results = data.results;
+          console.log(data.results);
+
+          for (const result of results) {
+            console.log("영화제목:", result.title);
+            console.log("영화설명:", result.overview);
+            console.log("영화평점:", result.vote_average);
+            console.log("영화포스터:", result.poster_path);
+
+            let imgURL = "https://image.tmdb.org/t/p/w500" + result.poster_path;
+
+            $(".images").append(
+              `<a href = "./detail.html?id=${result.id}"><img src = "${imgURL}"></a>`
+            );
+            $(".images").append(`${result.title}">`);
+          }
+        },
+        error: function (request, status, error) {
+          console.log("code:" + request.status);
+          console.log("message:" + request.responseText);
+          console.log("error:" + error);
+        },
+      });
+    </script>
+  </body>
+</html>

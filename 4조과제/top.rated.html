@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./top.rated.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header"></header>
+
+      <main class="main">
+        <!-- 슬라이드 -->
+        <div class="slide">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+              <div class="swiper-slide">Slide 10</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              autoplay: {
+                delay: 3000,
+              },
+            });
+            swiper.on("slideChange", function () {
+              console.log("slide changed");
+            });
+          </script>
+          <!-- 슬라이드 -->
+        </div>
+        <div class="contents">
+          <div class="screenbox">
+            <span class="nowplaying"><strong>현재 상영작</strong></span>
+            <ul class="movie-list">
+              <!--  1-->
+              <li class="screen-add-box">
+                <div class="movie-info img">
+                  <span class="images"></span>
+                </div>
+                <div class="release_date"></div>
+                <div class="vote_average"></div>
+              </li>
+              <!-- 2 -->
+              <li class="screen-add-box">
+                <div class="movie-info img">
+                  <span class="images1"></span>
+                </div>
+                <div class="release_date1"></div>
+                <div class="vote_average1"></div>
+              </li>
+              <!--  3-->
+              <li class="screen-add-box">
+                <div class="movie-info img">
+                  <span class="images2"></span>
+                </div>
+                <div class="release_date2"></div>
+                <div class="vote_average2"></div>
+              </li>
+              <!--  4-->
+              <li class="screen-add-box">
+                <div class="movie-info img">
+                  <span class="images3"></span>
+                </div>
+                <div class="release_date3"></div>
+                <div class="vote_average3"></div>
+              </li>
+              <!--  5-->
+              <li class="screen-add-box">
+                <div class="movie-info img">
+                  <span class="images4"></span>
+                </div>
+                <div class="release_date4"></div>
+                <div class="vote_average4"></div>
+              </li>
+              <!--  6-->
+              <li class="screen-add-box">
+                <div class="movie-info img">
+                  <span class="images5"></span>
+                </div>
+                <div class="release_date5"></div>
+                <div class="vote_average5"></div>
+              </li>
+              <!-- 7 -->
+              <li class="screen-add-box">
+                <div class="movie-info img">
+                  <span class="images6"></span>
+                </div>
+                <div class="release_date6"></div>
+                <div class="vote_average6"></div>
+              </li>
+              <!-- 8 -->
+              <li class="screen-add-box">
+                <div class="movie-info img">
+                  <span class="images7"></span>
+                </div>
+                <div class="release_date7"></div>
+                <div class="vote_average7"></div>
+              </li>
+              <!--  -->
+            </ul>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer"></footer>
+
+      <!-- 자바스크립트 -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="./top.rated.js"></script>
+    </div>
+  </body>
+</html>
